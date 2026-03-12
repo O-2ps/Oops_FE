@@ -10,9 +10,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0, padding: 0 }}>
         <Container>
-          {children}
+          <MainWrapper>
+            {children}
+          </MainWrapper>
         </Container>
       </body>
     </html>
@@ -25,8 +27,26 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100dvh;
-  background-image: url("/assets/BG.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  overflow-x: auto;
+  overflow: hidden;
+`;
+
+const MainWrapper = styled.main`
+  width: 100%;
+  max-width: 430px;
+  height: 932px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
