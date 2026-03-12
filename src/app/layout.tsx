@@ -2,6 +2,7 @@
 
 import styled from "@emotion/styled";
 import React from "react";
+import GlobalStyle from "@/style/globalStyle";
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ margin: 0, padding: 0 }}>
         <Container>
+          <GlobalStyle />
           <MainWrapper>
             {children}
           </MainWrapper>
@@ -36,7 +38,7 @@ const Container = styled.div`
 const MainWrapper = styled.main`
   width: 100%;
   max-width: 430px;
-  height: 932px;
+  height: 874px;
   background-image: url("/assets/BG.svg");
   display: flex;
   flex-direction: column;
