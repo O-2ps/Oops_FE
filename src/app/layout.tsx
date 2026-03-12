@@ -37,7 +37,7 @@ const MainWrapper = styled.main`
   width: 100%;
   max-width: 430px;
   height: 932px;
-  background-color: #fff;
+  background-image: url("/assets/BG.svg");
   display: flex;
   flex-direction: column;
   overflow-y: auto;

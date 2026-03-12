@@ -1,5 +1,7 @@
 "use client";
 
+import Landing from "@/ui/landing";
+
 export default function LandingPage() {
-  return <div>test</div>;
+  return <Landing />;
 }
