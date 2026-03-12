@@ -1,4 +1,17 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
+
+const float = keyframes`
+    0% { transform: rotate(var(--rotate)) translateY(0); }
+    50% { transform: rotate(var(--rotate)) translateY(-0.625rem); }
+    100% { transform: rotate(var(--rotate)) translateY(0); }
+`;
+
+const blink = keyframes`
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+`;
 
 export const Container = styled.div`
     display: flex;
@@ -33,6 +46,7 @@ export const Star = styled.img<{
     size: string;
     rotate?: string;
     opacity?: number;
+    delay?: string;
 }>`
     position: absolute;
     top: ${(props) => props.top};
@@ -41,10 +55,13 @@ export const Star = styled.img<{
     right: ${(props) => props.right};
     width: ${(props) => props.size};
     height: ${(props) => props.size};
-    transform: rotate(${(props) => props.rotate || "0deg"});
+    --rotate: ${(props) => props.rotate || "0deg"};
+    transform: rotate(var(--rotate));
     opacity: ${(props) => props.opacity || 0.6};
     z-index: 0;
     pointer-events: none;
+    animation: ${float} 3s ease-in-out infinite;
+    animation-delay: ${(props) => props.delay || "0s"};
 `;
 
 export const Notice = styled.p`
@@ -62,6 +79,7 @@ export const Notice = styled.p`
          0px  0.1rem 0 #F6FFF7,
         -0.15rem  0px 0 #F6FFF7,
          0.15rem  0px 0 #F6FFF7;
+    animation: ${blink} 2s infinite ease-in-out;
 `;
 
 export const CenterSection = styled.div`
@@ -111,4 +129,8 @@ export const LoginButton = styled.button`
     cursor: pointer;
     padding: 0.25rem 0.5rem;
     text-shadow: 0.15rem 0.15rem 0 #EAAFB8;
+
+    &:active {
+        transform: scale(0.98);
+    }
 `;

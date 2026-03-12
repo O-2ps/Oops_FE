@@ -12,13 +12,15 @@ export default function Landing() {
                     top="-12rem"
                     right="-2rem"
                     size="24rem"
-                    rotate="28deg"
+                    rotate="24deg"
+                    delay="0s"
                 />
                 <S.Star
                     src="/assets/star.svg"
-                    top="15rem"
+                    top="16.5rem"
                     right="2.5rem"
                     size="13rem"
+                    delay="-1s"
                 />
                 <S.Star
                     src="/assets/star.svg"
@@ -26,6 +28,7 @@ export default function Landing() {
                     right="12rem"
                     size="26rem"
                     rotate="-10deg"
+                    delay="-2s"
                 />
 
                 <S.Notice>마이페이지는 로그인 후 이용 가능합니다.</S.Notice>
