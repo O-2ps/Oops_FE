@@ -1,8 +1,15 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import * as S from "./style";
 
 export default function Landing() {
+    const router = useRouter();
+
+    const handleGuestLogin = () => {
+        router.push("/home");
+    };
+
     return (
         <S.Container>
             <S.GreenBox />
@@ -43,7 +50,7 @@ export default function Landing() {
 
                 <S.ButtonSection>
                     <S.LoginButton>[ 카카오톡 로그인 ]</S.LoginButton>
-                    <S.LoginButton>[ 비회원 로그인 ]</S.LoginButton>
+                    <S.LoginButton onClick={handleGuestLogin}>[ 비회원 로그인 ]</S.LoginButton>
                 </S.ButtonSection>
             </S.MainContent>
             <S.GreenBox />
