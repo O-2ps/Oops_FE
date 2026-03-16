@@ -1,8 +1,15 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import * as S from "./style";
 
 export default function Home() {
+    const router = useRouter();
+
+    const handleStartAnalysis = () => {
+        router.push("/lastCheck");
+    };
+
     return (
         <S.Container>
             <S.GreenBox />
@@ -17,7 +24,7 @@ export default function Home() {
                     <S.ColorWheel src="/assets/colors.svg" alt="Color Wheel" />
                     <S.ArrowButton>&gt;</S.ArrowButton>
                 </S.WheelSection>
-                <S.FooterAction>
+                <S.FooterAction onClick={handleStartAnalysis}>
                     [ 분석 시작하기 ]
                 </S.FooterAction>
             </S.MainContent>
