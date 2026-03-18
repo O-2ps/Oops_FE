@@ -16,7 +16,7 @@ export default function Skin() {
             <S.MainContent>
                 <S.Header>
                     <S.StepNumber>2.</S.StepNumber>
-                    <S.Title>피부 타입 진단하기</S.Title>
+                    <S.Title>피부 타입 분석하기</S.Title>
                 </S.Header>
 
                 <S.WheelSection>
