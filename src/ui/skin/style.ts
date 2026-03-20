@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 export const Container = styled.div`
     display: flex;
@@ -88,12 +89,20 @@ export const ArrowButton = styled.button`
     }
 `;
 
+const float = keyframes`
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-0.8rem); }
+    100% { transform: translateY(0); }
+`;
+
 export const Mask = styled.img`
     width: 16rem;
     height: 16rem;
     object-fit: contain;
     display: block;
+    animation: ${float} 3s ease-in-out infinite;
 `;
+
 
 export const FooterAction = styled.button`
     background: none;
