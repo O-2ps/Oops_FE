@@ -16,7 +16,7 @@ export default function Home() {
             <S.MainContent>
                 <S.Header>
                     <S.StepNumber>1.</S.StepNumber>
-                    <S.Title>퍼스널 컬러 분석하기</S.Title>
+                    <S.Title>마이페이지</S.Title>
                 </S.Header>
 
                 <S.WheelSection>
