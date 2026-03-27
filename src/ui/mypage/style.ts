@@ -89,7 +89,7 @@ export const WheelSection = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 `;
 
 export const ArrowButton = styled.button`

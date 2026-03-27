@@ -65,9 +65,9 @@ export const Title = styled.h1`
 export const WheelSection = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    gap: 1.5rem;
+    padding: 0 1.5rem;
 `;
 
 export const ArrowButton = styled.button`

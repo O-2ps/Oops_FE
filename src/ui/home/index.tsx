@@ -20,9 +20,9 @@ export default function Home() {
                 </S.Header>
 
                 <S.WheelSection>
-                    <S.ArrowButton>&lt;</S.ArrowButton>
+                    <S.ArrowButton onClick={() => router.push("/mypage")}>&lt;</S.ArrowButton>
                     <S.ColorWheel src="/assets/colors.svg" alt="Color Wheel" />
-                    <S.ArrowButton>&gt;</S.ArrowButton>
+                    <S.ArrowButton onClick={() => router.push("/skin")}>&gt;</S.ArrowButton>
                 </S.WheelSection>
                 <S.FooterAction onClick={handleStartAnalysis}>
                     [ 분석 시작하기 ]

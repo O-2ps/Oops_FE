@@ -25,19 +25,19 @@ export default function Home() {
                         * 로그인 페이지로 이동하기
                     </S.LoginLink>
                 )}
-                
+
                 <S.Header>
                     <S.StepNumber>{showUnauthorized ? "3." : "1."}</S.StepNumber>
                     <S.Title>{showUnauthorized ? "마이페이지" : "퍼스널 컬러 분석하기"}</S.Title>
                 </S.Header>
 
                 <S.WheelSection>
-                    <S.ArrowButton>&lt;</S.ArrowButton>
-                    <S.ColorWheel 
-                        src={showUnauthorized ? "/assets/mypage_iridescent.png" : "/assets/mypage.svg"} 
-                        alt={showUnauthorized ? "My Page Iridescent Objects" : "Color Wheel"} 
+                    <S.ArrowButton onClick={() => router.push("/skin")}>&lt;</S.ArrowButton>
+                    <S.ColorWheel
+                        src={showUnauthorized ? "/assets/mypage.svg" : "/assets/mypage.svg"}
+                        alt={showUnauthorized ? "My Page Iridescent Objects" : "Color Wheel"}
                     />
-                    <S.ArrowButton>&gt;</S.ArrowButton>
+                    <S.ArrowButton onClick={() => router.push("/home")}>&gt;</S.ArrowButton>
                 </S.WheelSection>
 
                 {showUnauthorized ? (

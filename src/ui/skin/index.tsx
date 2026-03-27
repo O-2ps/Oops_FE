@@ -20,9 +20,9 @@ export default function Skin() {
                 </S.Header>
 
                 <S.WheelSection>
-                    <S.ArrowButton>&lt;</S.ArrowButton>
+                    <S.ArrowButton onClick={() => router.push("/home")}>&lt;</S.ArrowButton>
                     <S.Mask src="/assets/mask.svg" alt="mask" />
-                    <S.ArrowButton>&gt;</S.ArrowButton>
+                    <S.ArrowButton onClick={() => router.push("/mypage")}>&gt;</S.ArrowButton>
                 </S.WheelSection>
                 <S.FooterAction onClick={handleStartAnalysis}>
                     [ 분석 시작하기 ]
