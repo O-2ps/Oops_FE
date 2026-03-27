@@ -35,7 +35,7 @@ export const LoginLink = styled.button`
     font-size: 0.9rem;
     color: #FF8CB6;
     position: absolute;
-    top: 1.5rem;
+    top: 3.5rem;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;

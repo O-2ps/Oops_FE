@@ -27,22 +27,22 @@ export default function Home() {
                 )}
 
                 <S.Header>
-                    <S.StepNumber>{showUnauthorized ? "3." : "1."}</S.StepNumber>
-                    <S.Title>{showUnauthorized ? "마이페이지" : "퍼스널 컬러 분석하기"}</S.Title>
+                    <S.StepNumber>3.</S.StepNumber>
+                    <S.Title>마이페이지</S.Title>
                 </S.Header>
 
                 <S.WheelSection>
                     <S.ArrowButton onClick={() => router.push("/skin")}>&lt;</S.ArrowButton>
                     <S.ColorWheel
-                        src={showUnauthorized ? "/assets/mypage.svg" : "/assets/mypage.svg"}
-                        alt={showUnauthorized ? "My Page Iridescent Objects" : "Color Wheel"}
+                        src={"/assets/mypage.svg"}
+                        alt={"My Page Iridescent Objects"}
                     />
                     <S.ArrowButton onClick={() => router.push("/home")}>&gt;</S.ArrowButton>
                 </S.WheelSection>
 
                 {showUnauthorized ? (
                     <S.StatusText>
-                        [ 로그인을 하지 않았습니다. ]
+                        [ 로그인을 하지 않았습 니다. ]
                     </S.StatusText>
                 ) : (
                     <S.FooterAction onClick={handleEnter}>
