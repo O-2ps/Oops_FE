@@ -1,7 +1,6 @@
 'use client'
 
 import styled from "@emotion/styled";
-import React from "react";
 import GlobalStyle from "@/style/globalStyle";
 
 export default function RootLayout({
