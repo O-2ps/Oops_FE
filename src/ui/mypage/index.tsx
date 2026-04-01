@@ -42,7 +42,7 @@ export default function Home() {
 
                 {showUnauthorized ? (
                     <S.StatusText>
-                        [ 로그인을 하지 않았습 니다. ]
+                        [ 로그인을 하지 않았습니다. ]
                     </S.StatusText>
                 ) : (
                     <S.FooterAction onClick={handleEnter}>
