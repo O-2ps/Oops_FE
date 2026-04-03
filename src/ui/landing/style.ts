@@ -13,6 +13,12 @@ const blink = keyframes`
     100% { opacity: 1; }
 `;
 
+const logoFloat = keyframes`
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-0.1rem); }
+    100% { transform: translateY(0); }
+`;
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -93,6 +99,7 @@ export const CenterSection = styled.div`
 export const Logo = styled.img`
     width: 15rem;
     height: auto;
+    animation: ${logoFloat} 3s ease-in-out infinite;
 `;
 
 export const SubTitle = styled.h2`
