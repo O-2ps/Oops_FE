@@ -7,6 +7,7 @@ export default function LastCheck() {
     const router = useRouter();
 
     const handleStart = () => {
+        router.push("/analysis");
     };
 
     return (
