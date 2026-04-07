@@ -1,25 +1,34 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
 import { useRouter } from "next/navigation";
+import { QUESTIONS } from "./data";
 
 export default function Analysis() {
     const router = useRouter();
+    const [currentStep, setCurrentStep] = useState(0);
 
     const handleAnswer = (answer: boolean) => {
-        console.log("Answered:", answer);
+        console.log(`Question ${currentStep + 1} answered:`, answer);
+
+        if (currentStep < QUESTIONS.length - 1) {
+            setCurrentStep(currentStep + 1);
+        } else {
+            router.push("/skin");
+        }
     };
+
+    const currentQuestion = QUESTIONS[currentStep];
 
     return (
         <S.Container>
             <S.GreenBox />
             <S.MainContent>
                 <S.QuestionSection>
-                    <S.QuestionNumber>Q1.</S.QuestionNumber>
+                    <S.QuestionNumber>{currentQuestion.number}</S.QuestionNumber>
                     <S.QuestionText>
-                        세안을 하고 아무것도<br />
-                        바르지 않으면 건조하다.
+                        {currentQuestion.text}
                     </S.QuestionText>
                 </S.QuestionSection>
 
