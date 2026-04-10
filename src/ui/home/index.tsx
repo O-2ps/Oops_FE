@@ -7,7 +7,7 @@ export default function Home() {
     const router = useRouter();
 
     const handleStartAnalysis = () => {
-        router.push("/lastCheck");
+        router.push("/lastCheck?from=color");
     };
 
     return (

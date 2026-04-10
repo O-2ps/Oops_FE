@@ -1,13 +1,17 @@
 'use client'
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import * as S from "./style";
 
 export default function LastCheck() {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const from = searchParams.get("from");
 
     const handleStart = () => {
-        router.push("/analysis");
+        if (from === "skin") {
+            router.push("/analysis");
+        }
     };
 
     return (

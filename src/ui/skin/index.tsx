@@ -7,7 +7,7 @@ export default function Skin() {
     const router = useRouter();
 
     const handleStartAnalysis = () => {
-        router.push("/lastCheck");
+        router.push("/lastCheck?from=skin");
     };
 
     return (
