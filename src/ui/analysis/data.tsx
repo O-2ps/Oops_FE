@@ -41,7 +41,7 @@ export const QUESTIONS = [
         number: "Q5.",
         text: (
             <>
-                새 화장품을 사용하면<br />
+                새 화장품 사용 시<br />
                 피부가 쉽게 붉어진다.
             </>
         )
