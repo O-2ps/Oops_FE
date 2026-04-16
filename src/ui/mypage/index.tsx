@@ -13,7 +13,7 @@ export default function Home() {
     };
 
     const handleLoginRedirect = () => {
-        console.log("Redirecting to login...");
+        router.push("/");
     };
 
     return (
