@@ -9,7 +9,7 @@ export default function Home() {
     const [showUnauthorized, setShowUnauthorized] = useState(false);
 
     const handleEnter = () => {
-        setShowUnauthorized(true);
+        router.push("/mypageDetail");
     };
 
     const handleLoginRedirect = () => {
