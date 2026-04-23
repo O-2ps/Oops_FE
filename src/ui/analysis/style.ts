@@ -1,20 +1,7 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    position: relative;
-`;
 
-export const GreenBox = styled.div`
-    height: 2.2rem;
-    width: 100%;
-    background-color: #C6EB8D;
-    z-index: 2;
-    flex-shrink: 0;
-`;
+export { Container, GreenBox } from "../common";
 
 export const MainContent = styled.main`
     flex: 1;
