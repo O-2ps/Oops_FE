@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import * as S from "./style";
+import MypageHeader from "./components/MypageHeader";
+import MypageWheel from "./components/MypageWheel";
+import MypageStatus from "./components/MypageStatus";
 
 export default function Home() {
     const router = useRouter();
@@ -16,39 +19,30 @@ export default function Home() {
         router.push("/");
     };
 
+    const handlePrev = () => {
+        router.push("/skin");
+    };
+
+    const handleNext = () => {
+        router.push("/home");
+    };
+
     return (
         <S.Container>
             <S.GreenBox />
             <S.MainContent>
-                {showUnauthorized && (
-                    <S.LoginLink onClick={handleLoginRedirect}>
-                        * 로그인 페이지로 이동하기
-                    </S.LoginLink>
-                )}
+                <MypageHeader />
+                
+                <MypageWheel 
+                    onPrev={handlePrev} 
+                    onNext={handleNext} 
+                />
 
-                <S.Header>
-                    <S.StepNumber>3.</S.StepNumber>
-                    <S.Title>마이페이지</S.Title>
-                </S.Header>
-
-                <S.WheelSection>
-                    <S.ArrowButton onClick={() => router.push("/skin")}>&lt;</S.ArrowButton>
-                    <S.ColorWheel
-                        src={"/assets/mypage.svg"}
-                        alt={"My Page Iridescent Objects"}
-                    />
-                    <S.ArrowButton onClick={() => router.push("/home")}>&gt;</S.ArrowButton>
-                </S.WheelSection>
-
-                {showUnauthorized ? (
-                    <S.StatusText>
-                        [ 로그인을 하지 않았습니다. ]
-                    </S.StatusText>
-                ) : (
-                    <S.FooterAction onClick={handleEnter}>
-                        [ 들어가기 ]
-                    </S.FooterAction>
-                )}
+                <MypageStatus 
+                    showUnauthorized={showUnauthorized}
+                    onLoginRedirect={handleLoginRedirect}
+                    onEnter={handleEnter}
+                />
             </S.MainContent>
             <S.GreenBox />
         </S.Container>
